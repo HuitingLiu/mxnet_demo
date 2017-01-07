@@ -123,7 +123,7 @@ if __name__ == '__main__':
             'learning_rate': lr,
             'wd': 0.,
             'beta1': beta1,
-            'decay_factor':0.9999,
+            'lr_scheduler': mx.lr_scheduler.FactorScheduler(1, 0.9999),
         })
     mods = [modG]
 
@@ -139,7 +139,7 @@ if __name__ == '__main__':
             'learning_rate': lr,
             'wd': 0.,
             'beta1': beta1,
-            'decay_factor':0.9999,
+            'lr_scheduler': mx.lr_scheduler.FactorScheduler(1, 0.9999),
         })
     mods.append(modD)
 
